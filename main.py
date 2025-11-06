@@ -15,8 +15,6 @@ app = FastAPI(
     title="User Authentication API",
     version="1.0.0",
     description="간단한 사용자 인증 시스템 API",
-    docs_url="/api/docs",
-    redoc_url="/api/redoc"
 )
 
 # Pydantic 모델 정의 - 요청/응답 데이터 검증
