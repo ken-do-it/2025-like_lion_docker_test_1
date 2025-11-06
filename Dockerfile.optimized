@@ -115,7 +115,7 @@ USER appuser
 # ==================================================
 # 포트 문서화
 # ==================================================
-EXPOSE 8000
+EXPOSE 8001
 
 # ==================================================
 # 헬스체크 ⭐⭐
@@ -124,7 +124,7 @@ HEALTHCHECK --interval=30s \
             --timeout=10s \
             --start-period=10s \
             --retries=3 \
-  CMD curl -f http://localhost:8000/health || exit 1
+  CMD curl -f http://localhost:8001/health || exit 1
 # 설명:
 # - --interval=30s: 30초마다 확인
 # - --timeout=10s: 응답 대기 10초
@@ -136,5 +136,5 @@ HEALTHCHECK --interval=30s \
 # 실행 명령어
 # ==================================================
 # CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001"]
 # appuser 권한으로 실행됨

@@ -204,4 +204,4 @@ async def health_check():
 
 # 직접 실행 시 (개발 환경)
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8001)
