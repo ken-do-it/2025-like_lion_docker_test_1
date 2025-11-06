@@ -200,6 +200,8 @@ async def health_check():
         }
     )
 
+# 나는 수정하는걸 확인 해보려고 작성하고 있음
+
 # 직접 실행 시 (개발 환경)
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
